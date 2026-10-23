@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "package": "com.petey.addon.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "BlockEntityRenderDispatcherMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "petey-addon",
+  "version": "${version}",
+  "name": "Petey Addon",
+  "description": "Anubis addon made by Petey.",
+  "authors": [
+    "Petey"
+  ],
+  "environment": "client",
+  "entrypoints": {
+    "anubis": [
+      "com.petey.addon.PeteyAddon"
+    ]
+  },
+  "mixins": [
+    "petey-addon.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.21.11",
+    "java": ">=21",
+    "anubisplus": "*"
+  }
+}
