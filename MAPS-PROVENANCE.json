@@ -1,0 +1,45 @@
+{
+  "repository": "https://github.com/W3eklyPlayTT/petey-addon-anubis",
+  "base_commit": "ed4c2d5e4a59250d82733ea4743e0e4fc732208d",
+  "yarn": "1.21.11+build.1",
+  "mapping_sha256": "214a676102f7890dfc076c3431f1049b593561fa0d63cefe2217207e3bd3d562",
+  "inputs": {
+    "uploaded_petey_decompiled_zip": "88bc306d21c26f99fe062011af314af620508fafd95da96249cf565c422d4de2",
+    "original_petey_0.5.0_jar": "0a385746cc13c10a242d1aeca48f0e783dc8df8e1eb4e8d2c43817c6a9c7649e"
+  },
+  "preserved_baseline_sha256": {
+    "build.gradle": "09a164eff13e3bffd239fd411a277ebef085eb213aec0d48efe3b95bf6c8d4a0",
+    "gradle.properties": "cc261d64393597de9e20454cfe699cd6e5bbee09e2d98c171abe262960008f27",
+    "README.md": "5462e9fd86913409000323e81b31f4f4dd198f4dc3e261df500823ddbaa0c3f1",
+    "settings.gradle": "e1eea7e408e037441316ae32c4c1e8cee06a6ed467f55b458643d4538a575e1b",
+    "libs/.gitkeep": "0c44ed97dd35a359c072931e416c3e39b803640b7daeb505627af46dcb66bc4b",
+    "gradle/wrapper/gradle-wrapper.properties": "8906bdbce6cdf99a1cf7f4ec366704977f3a702e513f2536969642fc1271fdd7",
+    "src/main/resources/fabric.mod.json": "f206adce4c5f52fd5cf78328582134fcdba5d3b31a208af2e14ee8920edb3713",
+    "src/main/resources/petey-addon.mixins.json": "09bd07ecbec78c0292414c7715c25225bf4e992b6714942268c2cd509103ee16",
+    "src/main/java/com/petey/addon/PeteyAddon.java": "ebe95089dbbb78b0edb34dcdc9e0c2e68dcb529097e28c73b067cc962151df71",
+    "src/main/java/com/petey/addon/mixin/BlockEntityRenderDispatcherMixin.java": "f6ed8a6b17f5d73b4fbe0b481a6ab094d6b92dcc9ff4017ddfc8432daa84ae79",
+    "src/main/java/com/petey/addon/modules/PeteysEspBypass.java": "8daddc94988c5caaea682d2e1c3a7854c28c603cec240135d6853a098eff3789",
+    "src/main/java/com/petey/addon/modules/PeteysStaffLive.java": "8258ca1dc7d1599dd176b526bc25adf38d5fefed423ac0b11102291e9e421cfe"
+  },
+  "added_files": [
+    "MAPS-CONTRIBUTION.md",
+    "maps.init.gradle",
+    "src/main/java/com/petey/addon/hud/DragBox.java",
+    "src/main/java/com/petey/addon/map/BiomeColors.java",
+    "src/main/java/com/petey/addon/map/DonutRegions.java",
+    "src/main/java/com/petey/addon/maps/PeteyMapsAddon.java",
+    "src/main/java/com/petey/addon/modules/PeteysRegionMap.java",
+    "src/main/java/com/petey/addon/modules/PeteysSeedMap.java",
+    "MAPS-PROVENANCE.json"
+  ],
+  "verification": {
+    "added_java_compilation": "PASS, Java 21, exact Yarn build.1, annotation processing disabled",
+    "region_original_jar_comparisons": 23104,
+    "biome_color_comparisons": 54,
+    "unknown_biome_fallback": "PASS",
+    "full_repository_build": "NOT SUCCESSFUL: existing source/API errors and incomplete build/dependency setup",
+    "in_game_validation": "NOT RUN",
+    "gradle_init_script_execution": "NOT RUN"
+  },
+  "no_binaries_in_deliverable": true
+}

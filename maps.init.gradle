@@ -1,0 +1,23 @@
+import groovy.json.JsonOutput
+import groovy.json.JsonSlurper
+
+// Run from the repository root: gradle -I maps.init.gradle clean build
+// Only the generated resource is changed; tracked repository files stay intact.
+gradle.projectsEvaluated {
+    def p = gradle.rootProject
+    p.tasks.named('processResources').configure {
+        inputs.property('peteyMapsEntrypoint', 'com.petey.addon.maps.PeteyMapsAddon')
+        doLast {
+            def output = new File(destinationDir, 'fabric.mod.json')
+            def metadata = new JsonSlurper().parse(output)
+            def entrypoints = metadata.entrypoints.anubis
+            def maps = 'com.petey.addon.maps.PeteyMapsAddon'
+            def original = entrypoints.indexOf('com.petey.addon.PeteyAddon')
+            if (original >= 0) entrypoints[original] = maps
+            else if (!entrypoints.contains(maps)) {
+                throw new GradleException('Original Petey entrypoint not found; refusing an ambiguous integration')
+            }
+            output.setText(JsonOutput.prettyPrint(JsonOutput.toJson(metadata)) + '\n', 'UTF-8')
+        }
+    }
+}
